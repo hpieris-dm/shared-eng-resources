@@ -15,7 +15,7 @@ Every skill here is a **test skill**. When an agent runs one, it does not run re
        source: "git::https://github.com/hpieris-dm/shared-eng-resources.git?ref=v1.0.0"
    ```
 
-   This uses your existing git credentials for GitHub (for example `gh auth login`). The repo is private, so you need read access to it. To use SSH instead:
+   The repo is public, so no GitHub login is needed. To use SSH instead:
    `git::git@github.com:hpieris-dm/shared-eng-resources.git?ref=v1.0.0`
 3. Check out a feature branch, then run `/dmx/sync`. It refuses to run on `main` because it commits the vendored files. The skills land under `.dmx/vendor/platform/skills/`.
 
