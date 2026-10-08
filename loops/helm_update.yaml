@@ -1,0 +1,16 @@
+name: helm_update
+skills:
+  - helm_update
+trigger:
+  type: manual
+goal_state: "Helm update plan written to .dmx-test/helm_update.md"
+on_optional_failure: warn
+failure_handling: pause
+human_gate: true
+on_complete:
+  on_success:
+    trigger_loop: null
+  on_failure:
+    trigger_loop: null
+  on_warning:
+    trigger_loop: null
